@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>首页</title><link rel="shortcut icon" href=./favicon.ico type=image/x-icon><link href=static/css/public1.css rel=stylesheet><script>// 禁用缩放
+      function addMeta() {
+        //   $('head').append('<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />');
+      }
+      setTimeout(addMeta, 3000);
+
+
+
+      // 禁用双指放大
+      document.documentElement.addEventListener('touchstart', function (event) {
+          if (event.touches.length > 1) {
+              event.preventDefault();
+          }
+      }, {
+          passive: false
+      });
+
+      // 禁用双击放大
+      var lastTouchEnd = 0;
+      document.documentElement.addEventListener('touchend', function (event) {
+          var now = Date.now();
+          if (now - lastTouchEnd <= 300) {
+              event.preventDefault();
+          }
+          lastTouchEnd = now;
+      }, {
+          passive: false
+      });</script><link href=./static/css/app.633fb0a90120fd4cb6fb9140463ee783.css rel=stylesheet></head><body style="height: 100%; position: absolute; width: 100%;"><div id=app></div><script type=text/javascript src=./static/js/manifest.df26680efda7c327f211.js></script><script type=text/javascript src=./static/js/vendor.7260a55255353ecb051a.js></script><script type=text/javascript src=./static/js/app.76a25023b65fba5f7c57.js></script></body></html>
